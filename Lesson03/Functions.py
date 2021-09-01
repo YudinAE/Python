@@ -16,7 +16,7 @@ def user_division(dividend: number_types, divider: number_types) -> number_types
     """
     return dividend / divider
 
-# ========== Функция вывода информации по пользователю ==========
+# ========== Функция вывода информации по пользователю (вариант 1) ==========
 def print_user_data(**user_data) -> None:
     """ Распечатывает в одну строку данные пользователя
     :param user_data: данные пользователя
@@ -24,3 +24,10 @@ def print_user_data(**user_data) -> None:
     print(f'ИМЯ: {user_data.get("name")}; ФАМИЛИЯ: {user_data.get("surname")}; '
           f'ГОД РОЖДЕНИЯ: {user_data.get("birth_year")}; ГОРОД ПРОЖИВАНИЯ: {user_data.get("city")}; '
           f'EMAIL: {user_data.get("email")}; ТЕЛЕФОН: {user_data.get("phone")}')
+
+# ========== Функция вывода информации по пользователю (вариант 2) ==========
+def print_user_data_input(**user_data):
+    """ Выводим в одну строку данные пользователя
+    :param user_data: данные пользователя
+    """
+    return list(user_data.values())

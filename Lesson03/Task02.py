@@ -6,10 +6,12 @@
 ==========================================================================================="""
 # Добавление функции user_division из модуля Functions
 from Functions import print_user_data
+from Functions import print_user_data_input
 
 if __name__ == '__main__':
     # Вывод информации в консоль
-    print('Задание 2 урок 3. Функция вывода информации по пользователю')
+    # ==================================== Вариант 1 ====================================
+    print('========== Задание 2 урок 3. Функция вывода информации по пользователю. Вариант 1')
     # Добавление информации по пользователю
     user = {
         'name': 'Aleksandr',
@@ -21,3 +23,12 @@ if __name__ == '__main__':
     }
     # Вывод данных по пользователю с помощью пользовательской функции print_user_data из модуля Functions
     print_user_data(**user)
+
+    # ==================================== Вариант 2 ====================================
+    print('==========  Задание 2 урок 3. Функция вывода информации по пользователю c вводом данных от пользователя. Вариант 2')
+    print(print_user_data_input(name=input('Enter name: '),
+                s_name=input('Enter second name: '),
+                b_date=input('Enter birth day: '),
+                l_town=input('Enter live town: '),
+                email=input('Enter email: '),
+                tel=input('Enter tel number: ')))
