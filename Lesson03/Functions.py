@@ -31,3 +31,9 @@ def print_user_data_input(**user_data):
     :param user_data: данные пользователя
     """
     return list(user_data.values())
+
+# ========== Функция удаления минимального элемента из списка ==========
+def user_sum_double_element(a, b, c):
+    user_list = [a, b, c]
+    user_list.remove(min(a, b, c))
+    return sum(user_list)
