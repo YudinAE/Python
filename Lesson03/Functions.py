@@ -75,3 +75,15 @@ def exponentiation_cycle(x, y):
         return exponentiation
     else:
         return 1 / exponentiation
+
+def int_func(text):
+    """
+    Функция вывода исходной строки, где каждое слово должно начинаться с заглавной буквы.
+    :param text: Строка из слов, разделенных пробелом
+    :return: Вывод сходной строки, где каждое слово должно начинаться с заглавной буквы
+    """
+    user_list = []
+    for i in range(len(text)):
+        user_list.append(text[i][0:1].title() + text[i][1:])
+    return ' '.join(user_list)
+
