@@ -7,6 +7,7 @@ class TypeError(Exception):
     def __init__(self, txt):
         self.txt = txt
 
+UsersInput = []
 while True:
     try:
         x = input('Введите натуральное число либо нажмите Enter, чтобы прекратить:')
@@ -14,14 +15,13 @@ while True:
             break
         if x.isnumeric():
             print('numeric ',x)
-            a.append(int(x))
+            UsersInput.append(int(x))
         elif x[0] == '-':
             if x[1:].isnumeric():
                 print('negative - ',x[1:])
-                a.append(int(x))
+                UsersInput.append(int(x))
         else:
             raise TypeError('Это не натуральное число!')
     except TypeError as TypeError:
         print(TypeError)
-
-
+print(UsersInput)
